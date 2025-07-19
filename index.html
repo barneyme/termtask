@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TermTask</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#2a2a2a" />
+    </head>
+    <body>
+        <div id="terminal">
+            <div id="output"></div>
+            <form id="command-form" autocomplete="off">
+                <div class="input-line">
+                    <span class="prompt">></span>
+                    <input type="text" id="command-input" autofocus />
+                </div>
+                <button
+                    type="submit"
+                    style="display: none"
+                    aria-hidden="true"
+                ></button>
+            </form>
+        </div>
+
+        <div id="note-editor-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h3>TermTask Editor</h3>
+                <textarea id="note-editor-textarea"></textarea>
+                <div class="modal-buttons">
+                    <button id="note-editor-save">Save</button>
+                    <button id="note-editor-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="alert-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h3 id="alert-modal-title">Alert</h3>
+                <p id="alert-modal-message"></p>
+                <div class="modal-buttons">
+                    <button id="alert-modal-close">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

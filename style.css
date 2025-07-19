@@ -1,0 +1,148 @@
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 20px;
+}
+
+#terminal {
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.input-line {
+    display: flex;
+}
+
+.prompt {
+    margin-right: 8px;
+    color: #569cd6;
+}
+
+#command-input {
+    background: none;
+    border: none;
+    color: #d4d4d4;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    outline: none;
+}
+
+.command-echo {
+    color: #569cd6;
+}
+.response {
+    color: #9cdcfe;
+}
+.error {
+    color: #f44747;
+}
+.help {
+    color: #4ec9b0;
+}
+.note {
+    color: #dcdcaa;
+}
+.todo {
+    color: #9cdcfe;
+}
+.calendar {
+    color: #c586c0;
+}
+.calendar-date {
+    color: #4ec9b0;
+}
+.link {
+    color: #ce9178; /* Orange for links */
+}
+.current-day {
+    background-color: #569cd6;
+    color: #1e1e1e;
+    padding: 0 1px;
+    border-radius: 2px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 8px;
+}
+
+#note-editor-modal .modal-content {
+    min-height: 500px;
+}
+
+#alert-modal .modal-content {
+    max-width: 400px;
+}
+
+#alert-modal-message {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #d4d4d4;
+}
+
+#note-editor-textarea {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border: 1px solid #3c3c3c;
+    font-family: inherit;
+    font-size: inherit;
+    flex-grow: 1; /* Make it fill available vertical space */
+    resize: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    background-color: #0e639c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.modal-buttons button:hover {
+    background-color: #1177bb;
+}
